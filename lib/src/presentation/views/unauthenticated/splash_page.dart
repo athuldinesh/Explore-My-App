@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/src/core/asset_helper.dart';
+import 'package:mobile/src/presentation/views/authenticated/wrapper.dart';
 import 'package:mobile/src/presentation/views/widgets/custom_button.dart';
 import 'package:mobile/src/presentation/views/widgets/custom_text.dart';
 
@@ -73,7 +74,9 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
         opacity: _buttonController,
         child: Container(
           margin: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
-          child: const CustomButton(
+          child: CustomButton(
+            onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Wrapper())),
             color: Colors.black,
             text: "Continue",
           ),
