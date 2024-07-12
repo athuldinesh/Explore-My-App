@@ -55,6 +55,12 @@ dependencies:
   path: ^1.9.0
   internet_connection_checker: ^1.0.0+1
   persistent_bottom_nav_bar_v2: ^5.3.0
+  flutter_carousel_widget: ^2.2.0
+  carousel_slider: ^4.0.0
+  shimmer: ^2.0.0
+  sliding_up_panel: ^2.0.0+1
+  badges: ^3.1.2
+  photo_view: ^0.15.0
   
 dev_dependencies:
   flutter_test:

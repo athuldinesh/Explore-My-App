@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/src/presentation/views/authenticated/dashboard.dart';
 import 'package:mobile/src/presentation/views/unauthenticated/login_page.dart';
 import 'package:mobile/src/presentation/views/widgets/custom_navigation_bar.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
@@ -16,7 +17,7 @@ class _WrapperState extends State<Wrapper> {
     return PersistentTabView(
       tabs: [
         PersistentTabConfig(
-          screen: LoginPage(),
+          screen: const DashboardPage(),
           item: ItemConfig(
             icon: const Icon(Icons.home),
             title: "Home",
