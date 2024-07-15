@@ -3,9 +3,11 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:mobile/src/core/asset_helper.dart';
 import 'package:mobile/src/core/constants.dart';
+import 'package:mobile/src/presentation/views/unauthenticated/registration_page.dart';
 import 'package:mobile/src/presentation/views/widgets/custom_button.dart';
 import 'package:mobile/src/presentation/views/widgets/custom_text.dart';
 import 'package:mobile/src/presentation/views/widgets/custom_text_field.dart';
+import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 class LoginPage extends StatefulWidget {
@@ -24,6 +26,16 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: GestureDetector(
+          onTap: () => Navigator.pop(context),
+          child: const Icon(
+            Icons.close,
+            color: Colors.black,
+          ),
+        ),
+      ),
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: LayoutBuilder(
@@ -86,7 +98,8 @@ class _LoginPageState extends State<LoginPage> {
             Material(
               type: MaterialType.transparency,
               child: InkWell(
-                onTap: () async {},
+                onTap: () => pushScreen(context,
+                    screen: const RegistrationPage(), withNavBar: false),
                 child: const CustomText(
                   text: "Sign Up here",
                   color: ThemeColor.mainColor,

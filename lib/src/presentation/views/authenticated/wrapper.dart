@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/src/presentation/views/authenticated/dashboard.dart';
 import 'package:mobile/src/presentation/views/unauthenticated/login_page.dart';
+import 'package:mobile/src/presentation/views/unauthenticated/more_page.dart';
+import 'package:mobile/src/presentation/views/unauthenticated/sign_up_checker.dart';
 import 'package:mobile/src/presentation/views/widgets/custom_navigation_bar.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
@@ -24,7 +26,14 @@ class _WrapperState extends State<Wrapper> {
           ),
         ),
         PersistentTabConfig(
-          screen: const LoginPage(),
+          screen: const SignUpChecker(),
+          item: ItemConfig(
+            icon: const Icon(Icons.bookmark),
+            title: "Saved",
+          ),
+        ),
+        PersistentTabConfig(
+          screen: const MorePage(),
           item: ItemConfig(
             icon: const Icon(Icons.more_vert),
             title: "More",

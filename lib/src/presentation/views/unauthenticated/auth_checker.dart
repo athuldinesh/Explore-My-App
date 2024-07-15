@@ -27,7 +27,7 @@ class _AuthCheckerState extends State<AuthChecker> {
             return const SplashPage();
           }
 
-          return SizedBox();
+          return const SizedBox();
         },
       ),
     );
